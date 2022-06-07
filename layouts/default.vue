@@ -54,7 +54,12 @@ export default {
       title: "Menu",
       items: [
         {
-          icon: "mdi-chart-bubble",
+          icon: "mdi-home",
+          title: "Home",
+          to: "/",
+        },
+        {
+          icon: "mdi-briefcase",
           title: "Serviços",
           to: "/servicos",
         },
@@ -62,6 +67,11 @@ export default {
           icon: "mdi-chart-bubble",
           title: "Empresa",
           to: "/empresa",
+        },
+        {
+          icon: "mdi-chart-bubble",
+          title: "Produtos",
+          to: "/produtos",
         },
       ],
     };
