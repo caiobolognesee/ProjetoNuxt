@@ -1,22 +1,22 @@
 <template>
-  <div>
-    Login
-  </div>
+  <div>Login</div>
 </template>
 
 <script>
 export default {
-    name: "",
-    layout: "auth",
-    data() {
-        return {
-        };
-    },
-    methods:{
-    },
+  head() {
+    return {
+      titleTemplate: '%s - Login',
+    }
+  },
+  name: "",
+  layout: "auth",
+  data() {
+    return {};
+  },
+  methods: {},
 };
 </script>
 
 <style>
-
 </style>

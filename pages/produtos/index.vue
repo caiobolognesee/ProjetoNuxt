@@ -1,9 +1,15 @@
 <template>
   <div>
+    <h1 class="text-lg font-bold">Produtos</h1>
     <v-form>
-      <div>
-        {{ products }}
-        <!-- colocar um auto complete para selecionar o produto e ir para a pagina dele -->
+      <NuxtLink to="/produtos/product-a">Produto A</NuxtLink>
+      <NuxtLink to="/produtos/product-b">Produto B</NuxtLink>
+      <div
+        v-for="product in products"
+        :key="product.id"
+        class="border-b border-gray-400 py-3"
+      >
+        {{ product.title }}
       </div>
     </v-form>
   </div>
@@ -12,18 +18,18 @@
 
 <script>
 export default {
-  data() {},
-  async asyncData() {
-    await new Promise((resolve) => {
-      setTimeout(() => {
-        resolve();
-        console.log("promise solved");
-      }, 10000);
-    });
+  head() {
     return {
-      products: [{ name: "product-a" }, { name: "product-b" }],
+      titleTemplate: '%s - Produtos',
+    }
+  },
+  async asyncData({ $axios }) {
+    const products = await $axios.get(
+      "https://jsonplaceholder.typicode.com/posts"
+    );
+    return {
+      products,
     };
   },
-  methods: {},
 };
 </script>
