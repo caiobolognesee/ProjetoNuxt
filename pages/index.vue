@@ -9,14 +9,18 @@
 
 <script>
 export default {
+  asyncData({ $config }) {
+    console.log($config);
+  },
   mounted() {
-    console.log(this.$name("Caio"))
-    console.log(this.$dayjs().format())
+    console.log(this.$config.facebook_api_key);
+    console.log(this.$name("Caio"));
+    console.log(this.$dayjs().format());
   },
   head() {
     return {
-      titleTemplate: '%s - Home',
-    }
+      titleTemplate: "%s - Home",
+    };
   },
 };
 </script>

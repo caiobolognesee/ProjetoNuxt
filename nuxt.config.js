@@ -17,6 +17,14 @@ export default {
       { rel: 'icon', type: 'image/x-icon' }
     ]
   },
+  
+  publicRuntimeConfig: {
+    youtube_api_key: process.env.YOUTUBE_API_KEY
+  },
+
+  privateRuntimeConfig: {
+    facebook_api_key: process.env.FACEBOOK_API_KEY
+  },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
