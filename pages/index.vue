@@ -9,6 +9,10 @@
 
 <script>
 export default {
+  mounted() {
+    console.log(this.$name("Caio"))
+    console.log(this.$dayjs().format())
+  },
   head() {
     return {
       titleTemplate: '%s - Home',
