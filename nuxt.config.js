@@ -1,6 +1,7 @@
 import colors from 'vuetify/es5/util/colors'
 
 export default {
+  // target: 'static'
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Nuxt',
@@ -37,7 +38,8 @@ export default {
       mode: 'client'
     },
     '@/plugins/dayjs',
-    '@/plugins/vtooltip'
+    '@/plugins/vtooltip',
+    '@/plugins/axios'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

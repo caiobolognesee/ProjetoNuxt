@@ -20,13 +20,11 @@
 export default {
   head() {
     return {
-      titleTemplate: '%s - Produtos',
-    }
+      titleTemplate: "%s - Produtos",
+    };
   },
   async asyncData({ $axios }) {
-    const products = await $axios.get(
-      "https://jsonplaceholder.typicode.com/posts"
-    );
+    const products = await $axios.get("/posts");
     return {
       products,
     };

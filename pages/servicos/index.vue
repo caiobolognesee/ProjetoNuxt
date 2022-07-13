@@ -32,8 +32,8 @@
 export default {
   head() {
     return {
-      titleTemplate: '%s - Serviços',
-    }
+      titleTemplate: "%s - Serviços",
+    };
   },
   data() {
     return {
@@ -41,9 +41,7 @@ export default {
     };
   },
   async fetch() {
-    this.services = await this.$axios.$get(
-      "https://jsonplaceholder.typicode.com/users"
-    );
+    this.services = await this.$axios.$get("/users");
   },
 };
 </script>
